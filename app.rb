@@ -271,4 +271,5 @@ points_2d_1.display_coordinates
 points_3d_1 = Point3D.new(6,4,2)
 points_3d_1.display_coordinates
 
+test 
 
