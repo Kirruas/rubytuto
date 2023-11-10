@@ -1,3 +1,4 @@
+require_relative 'module.rb'
 class Animal  
     @@population = 0 #class variable    
     @population = 0
@@ -26,10 +27,13 @@ end
 
 class Dog < Animal
     @population = 0 # class instance variable
+    include DogModule
+
 end
 
 class Cat < Animal
     @population = 0 # class instance variable
+include CatModule
 end
 
 cat1 =Cat.new
@@ -46,3 +50,5 @@ animal3 = Animal.new
 puts "number of dogs ; #{Dog.count}"
 puts "number of cats ; #{Cat.count}"
 puts "number of animals : #{Animal.count_total_population}"
+dog1.bark
+cat1.miaou
